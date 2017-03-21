@@ -290,26 +290,26 @@ tools_install() {
   # Disable xdebug before any composer provisioning.
   sh /home/vagrant/bin/xdebug_off
 
-  # nvm
-  if [[ ! -d "/srv/config/nvm" ]]; then
-    echo -e "\nDownloading nvm, see https://github.com/creationix/nvm"
-    git clone "https://github.com/creationix/nvm.git" "/srv/config/nvm"
-    cd /srv/config/nvm
-    git checkout `git describe --abbrev=0 --tags`
-  else
-    echo -e "\nUpdating nvm..."
-    cd /srv/config/nvm
-    git pull origin master
-    git checkout `git describe --abbrev=0 --tags`
-  fi
-  # Activate nvm
-  source /srv/config/nvm/nvm.sh
+  # # nvm
+  # if [[ ! -d "/srv/config/nvm" ]]; then
+  #   echo -e "\nDownloading nvm, see https://github.com/creationix/nvm"
+  #   git clone "https://github.com/creationix/nvm.git" "/srv/config/nvm"
+  #   cd /srv/config/nvm
+  #   git checkout `git describe --abbrev=0 --tags`
+  # else
+  #   echo -e "\nUpdating nvm..."
+  #   cd /srv/config/nvm
+  #   git pull origin master
+  #   git checkout `git describe --abbrev=0 --tags`
+  # fi
+  # # Activate nvm
+  # source /srv/config/nvm/nvm.sh
 
-  # npm
-  #
-  # Make sure we have the latest npm version and the update checker module
-  npm install -g npm
-  npm install -g npm-check-updates
+  # # npm
+  # #
+  # # Make sure we have the latest npm version and the update checker module
+  # npm install -g npm
+  # npm install -g npm-check-updates
 
   # ack-grep
   #
