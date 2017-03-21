@@ -351,23 +351,23 @@ tools_install() {
     COMPOSER_HOME=/usr/local/src/composer composer global update
   fi
 
-  # Grunt
-  #
-  # Install or Update Grunt based on current state.  Updates are direct
-  # from NPM
-  if [[ "$(grunt --version)" ]]; then
-    echo "Updating Grunt CLI"
-    npm update -g grunt-cli &>/dev/null
-    npm update -g grunt-sass &>/dev/null
-    npm update -g grunt-cssjanus &>/dev/null
-    npm update -g grunt-rtlcss &>/dev/null
-  else
-    echo "Installing Grunt CLI"
-    npm install -g grunt-cli &>/dev/null
-    npm install -g grunt-sass &>/dev/null
-    npm install -g grunt-cssjanus &>/dev/null
-    npm install -g grunt-rtlcss &>/dev/null
-  fi
+  # # Grunt
+  # #
+  # # Install or Update Grunt based on current state.  Updates are direct
+  # # from NPM
+  # if [[ "$(grunt --version)" ]]; then
+  #   echo "Updating Grunt CLI"
+  #   npm update -g grunt-cli &>/dev/null
+  #   npm update -g grunt-sass &>/dev/null
+  #   npm update -g grunt-cssjanus &>/dev/null
+  #   npm update -g grunt-rtlcss &>/dev/null
+  # else
+  #   echo "Installing Grunt CLI"
+  #   npm install -g grunt-cli &>/dev/null
+  #   npm install -g grunt-sass &>/dev/null
+  #   npm install -g grunt-cssjanus &>/dev/null
+  #   npm install -g grunt-rtlcss &>/dev/null
+  # fi
 
   # Graphviz
   #
